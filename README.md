@@ -48,6 +48,16 @@
 **8** 在学习的环境下我们可以设置密码简单一点，方便后面的操作,`set global validate_password_policy=LOW; `，这里注意这里进入的是mysql的语句所以后面的这个分号（；）很重要，设置密码` set global validate_password_length=5；`,` ALTER USER 'root'@'localhost' IDENTIFIED BY 'root(你的密码输入的地方，这里我们假设的是root)'; `
 **9** 然后退出，重新登陆`
 mysql -uroot -proot `,执行`show databases;use mysql;select User,Host from user；update user set Host='%' where User='root';flush privileges; `
-    
+
+## Redis的安装
+**1** 先下载压缩包 ` wget https://download.redis.io/releases/redis-7.2.4.tar.gz ` ,然后解压并且执行` make&&make install `,前提` yum install -y gcc tcl `
+**2** 进入到文件夹中。备份一个**redis.conf** ，`cp`,
+**3** `# 监听的地址，默认是127.0.0.1，会导致只能本地访问，修改为0.0.0.0则可以在任意IP访问，生产环境不要设置为0.0.0.0
+bind 0.0.0.0
+# 守护进程，修改为yes后即可后台运行
+daemonize yes
+# 密码，设置后访问redis必须输入密码
+requirepass 123321 `
+**4** 在conf的目录下启动` redis-server redis.conf ,输入` redis-cli `,` AUTH 密码 `
 
 
