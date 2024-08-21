@@ -30,7 +30,7 @@
 **8** 安装操作界面 ` rabbitmq-plugins enable rabbitmq_management `,
 **9** 如果无法访问，可能是防火墙的原因，直接停止就可 `sytemctl stop firewalld `,
 **10** RabbitMQ的登陆是需要账号的，所以这里设置一下账号 `rabbitmqctl list_users ` `rabbitmqctl add_user admin 123 ``rabbitmqctl set_user_tags admin administrator ``rabbitmqctl set_permissions -p "/" admin ".*" ".*" ".*"`.
-
+**注意** 访问的时候应该为http://而不是https://，因为加了**s**之后会被置为无效连接.
 ## Sentinel的安装
 **1** 先保证安装了java环境，没有的话参考之前的[JDK的安装过程](JDK的安装过程),
 **2** 到官网安装压缩包 ` https://github.com/alibaba/Sentinel/releases/tag/1.8.8 `,
