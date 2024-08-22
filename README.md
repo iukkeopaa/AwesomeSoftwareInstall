@@ -77,7 +77,7 @@ WantedBy=multi-user.target `,`  systemctl daemon-reload `
 **4** 执行` source /etc/profile`
 **5** 进入到bin目录，启动`./mycat start`,并且查看状态`./mycat status`,如果显示正在running则表示安装成功.
 
-##MongoDB的安装
+## MongoDB的安装
 **1** 先下载安装的压缩包 ` curl -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-rhel70-4.0.3.tgz ` ***建议*** 切换到`/usr/local/`的目录下执行
 **2** 解压缩` tar zxvf mongodb-linux-x86_64-rhel70-4.0.3.tgz`
 **3** 将安装目录加载到全局`vim /etc/profile`,然后输入`export MONGODB_HOME=/usr/local/mongodb
@@ -87,5 +87,8 @@ export PATH=$PATH:$MONGODB_HOME/bin`，最后同样的常规操作执行`source 
 **6** 执行` ps -ef |grep mongodb`查看是否正常运行
 **7** 启动MongoDB ` ./mongo`
 **贴士** MongoDB和其他的数据库一样可以用可视化界面进行操作.
+
+## SQLite的安装
+目前，几乎所有版本的 Linux 操作系统都附带 SQLite。所以，只要使用下面的命令来检查您的机器上是否已经安装了 SQLite。
 
 
