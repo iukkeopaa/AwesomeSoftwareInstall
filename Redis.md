@@ -35,6 +35,8 @@ WantedBy=multi-user.target `,`  systemctl daemon-reload ```
 > https://www.runoob.com/redis/redis-tutorial.html
 >
 > http://doc.redisfans.com/
+>
+> https://redis.io/docs/latest/commands/
 
 
 ## Redis中遇到的问题
