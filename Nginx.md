@@ -22,3 +22,9 @@
 >
 >到这里，Nginx一般在80端口运行，你可以执行```curl http://localhost:80```来访问应用.
 
+## 参考资料
+
+> https://redis.io/docs/latest/commands/
+
+
+
