@@ -31,6 +31,10 @@ WantedBy=multi-user.target `,`  systemctl daemon-reload ```
 ## 资料参考
 
 > https://www.cnblogs.com/Lin1031/p/15743385.html
+>
+> https://www.runoob.com/redis/redis-tutorial.html
+>
+> http://doc.redisfans.com/
 
 
 ## Redis中遇到的问题
