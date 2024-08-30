@@ -56,4 +56,16 @@ Job for nginx.service failed because the control process exited with error code.
 > pkill -9 nginx
 > ./nginx
 
+## 使用第三方可视化软件的注意点
+
+RESP
+
+> 在URL中输入 `redis://你的地址:端口号`
+>
+> `连接设置` 有密码输入密码，没有不用输入，用户名一般为空，不用输入
+
+Redis insight
+
+> 切记！！！没用用户名不用输入
+
 
