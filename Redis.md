@@ -24,3 +24,29 @@ PrivateTmp=true
 
 [Install]
 WantedBy=multi-user.target `,`  systemctl daemon-reload ```
+
+
+## Redis中遇到的问题
+
+`nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Address already in use)
+nginx: [emerg] still could not bind()`
+
+> sudo netstat -tulnp | grep :80  或者 sudo lsof -i :80
+> ./nginx -s stop
+> ./nginx
+
+
+`
+Job for nginx.service failed because the control process exited with error code. See "systemctl status nginx.service" and "journalctl -xe" for details.
+`
+
+> nginx -t
+> netstat -tnlp
+> pkill -9 nginx
+> ./nginx
+
+
