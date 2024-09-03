@@ -1,0 +1,20 @@
+## &#x20;Maven的安装
+
+#### Maven的安装过程
+
+> 到官网下载压缩包 \`[Maven – Download Apache Maven](https://maven.apache.org/download.cgi)\`
+>
+> 在环境变量中设置`MAVEN`*`HOME` 为maven的安装地址，然后设置%MAV*EN\_HOME%\bin
+>
+> 在命令行中输入\``mvn -v`\`来检查是否安装成功
+>
+> 输入\`maven help\:system\`来加载仓库
+>
+> 配置仓库本地仓库地址&lt;localRepository&gt;`D:/maven_repo```
+>
+> 配置仓库镜像&#x20;
+>
+> 配置Java的版本
+>
+> 具体的设置参照文件
+
