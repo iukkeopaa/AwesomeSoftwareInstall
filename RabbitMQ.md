@@ -13,3 +13,5 @@
 >**9** 如果无法访问，可能是防火墙的原因，直接停止就可 `sytemctl stop firewalld `,
 >**10** RabbitMQ的登陆是需要账号的，所以这里设置一下账号 `rabbitmqctl list_users ` `rabbitmqctl add_user admin 123 ``rabbitmqctl set_user_tags admin administrator ``rabbitmqctl set_permissions -p "/" admin ".*" ".*" ".*"`.
 **注意** 访问的时候应该为http://而不是https://，因为加了**s**之后会被置为无效连接.
+
+> Rabbitmq的访问端口是15672
