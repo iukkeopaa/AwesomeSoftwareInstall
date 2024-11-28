@@ -11,3 +11,12 @@
 > **8** 在学习的环境下我们可以设置密码简单一点，方便后面的操作,`set global validate_password_policy=LOW; `，这里注意这里进入的是mysql的语句所以后面的这个分号（；）很重要，设置密码` set global validate_password_length=5；`,` ALTER USER 'root'@'localhost' IDENTIFIED BY 'root(你的密码输入的地方，这里我们假设的是root)'; `
 > **9** 然后退出，重新登陆`
 mysql -uroot -proot `,执行`show databases;use mysql;select User,Host from user；update user set Host='%' where User='root';flush privileges; `
+>
+> 下面将解决远程登录mysql报1130错误，这个错误根本就是没有授权
+> **1** use mysql
+> **2** SELECT User, Host FROM user
+> **3** update user set host ='%' where user ='root';
+> **4** FLUSH PRIVILEGES;  这一步很重要不要忘记了
+> **5** systemctl stop firewalld
+> **6** systemctl disable firewalld
+
