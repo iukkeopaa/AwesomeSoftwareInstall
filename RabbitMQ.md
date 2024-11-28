@@ -16,3 +16,9 @@
 
 > Rabbitmq的访问端口是15672
 > 这里的Rabbitmq在宝塔的面板可以直接在docker中运行
+
+
+window下如何安装rabbitmq
+> https://www.erlang.org/downloads,下载erlang,并且将文件添加到环境变量
+> https://www.erlang.org/downloads，下载rabbbtmq，
+> 找到rabbitmq下的sbin中的rabbitmq-service start，不让执行的话，就右键点击用系统管理员身份执行
